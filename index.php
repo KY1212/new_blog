@@ -79,7 +79,7 @@
           <?php
             $newslist = get_posts( array(
               'category_name' => 'journey',// 全件表示用はスラッグを空欄 
-              'posts_per_page' => 10 
+              'posts_per_page' => 1 
             ));
             foreach( $newslist as $post ):
             setup_postdata( $post );
