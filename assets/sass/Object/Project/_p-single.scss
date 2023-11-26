@@ -1,0 +1,516 @@
+@use "./../../Foundation/mixin" as *;
+
+.p-single {
+  width: calc(100% - 48px);
+  height: fit-content;
+  min-width: 843px;
+  background-color: $content__bg;
+  padding: 30px;
+  background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
+  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .13);
+
+
+  @include tab {
+    min-width: unset;
+    width: unset;
+    padding: 24px;
+  }
+
+  @include sp {
+    padding: 12px;
+  }
+
+  // 目次用スタイル
+  li {
+    font-size: 18px;
+    position: relative;
+    padding-left: 1em;
+    counter-increment: count;
+    margin-left: 1.4em;
+    text-indent: -1.6em;
+    &::before {
+      content: counter(count) ".";
+      padding: 0 10px 0 0;
+      color: #77254d;
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+
+  li+li {
+    margin-top: 12px;
+  }
+}
+
+.p-index__item {
+  font-size: 18px;
+  color: #77254d;
+  &+ol {
+    margin: 10px 0;
+  }
+
+  &+ol li {
+    font-size: 16px;
+  }
+}
+
+.p-single__title {
+  font-size: 22px;
+}
+
+.p-single__image {
+  width: 100%;
+  margin-top: 40px;
+  img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    @include sp {
+      height: 250px;
+    }
+  }
+}
+
+.p-post__text__area {
+  margin: 40px 0 40px;
+}
+
+.p-single__h3 {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #77254d;
+  @include sp {
+    font-size: 22px;
+  }
+}
+
+.p-single__h4 {
+  margin-top: 26px;
+  font-size: 22px;
+  color: #77254d;
+  padding-left: 6px;
+  border-left: 8px  #77254d;
+  border-style: double;
+  @include sp {
+    font-size: 20px;
+  }
+}
+
+.p-single__text {
+  font-size: 18px;
+  margin-top: 14px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.p-single__marker {
+  background: linear-gradient(transparent 66%, #efabab 0%);
+  display: inline;
+  padding: 0 2px 1px;
+}
+
+.p-index {
+  border: 1px solid #77254d;
+  padding: 20px;
+}
+
+.p-index__heading {
+  display: flex;
+  gap: 10px;
+  span {
+    font-size: 24px;
+    color: #77254d;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bold;
+  }
+}
+
+.p-index__list {
+  list-style: decimal;
+  padding: 20px 0 0 27px;
+  @include sp {
+    padding: 20px 0 0;
+  }
+}
+
+.p-index__item {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+    color: #77254d;
+  }
+}
+
+.p-index__list__sub {
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
+.p-index__item__sub {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+// 挿入画像のデフォスタイル
+.wp-caption.alignnone {
+  width: 100%;
+  margin-top: 20px;
+}
+
+// 挿入画像用任意クラス
+.p-single__add__image {
+  width: 100%;
+  height: fit-content;
+  max-height: 412px;
+  object-fit: cover;
+}
+
+// 挿入画像用任意クラス
+.p-single__add__image__full {
+  width: 100%;
+  height: fit-content;
+  max-height: 412px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+// 挿入画像用任意クラス
+.p-single__add__image__meddle {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  img {
+    width: 42%;
+    height: fit-content;
+  }
+}
+
+.p-single__list__disc {
+  list-style: disc;
+}
+
+
+
+.p-slider {
+  width: 100%;
+  // height: 480px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.p-slider__focus {
+  position: relative;
+  overflow: hidden;
+  border-left: solid 14px #333;
+  border-right: 14px solid #333;
+  height: 400px;
+  @include sp {
+    height: unset;
+  }
+}
+
+.p-slider__wrap {
+  display: flex;
+  position: relative;
+  height: -webkit-fill-available;
+}
+
+.p-slider__slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  @include sp {
+    width: 100%;
+    height: 210px;
+  }
+
+  img {
+      object-fit: cover;
+    @include sp {
+      height: auto;
+    }
+  }
+}
+
+
+.p-indicator {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  @include tab2 {
+    flex-wrap: wrap;
+  }
+// .p-single__add__image__slider {
+//   width: unset;
+//   height: unset;
+// }
+
+}
+
+.p-indicator__slide {
+  height: 70px !important;
+  width: 15% !important;
+  object-fit: cover;
+
+  @include sp {
+    height: 45px !important;
+    width: 16% !important;
+  }
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin: auto;
+  position: absolute;
+  bottom: 320px;
+  left: 20px;
+  background-color: transparent;
+  z-index: 9999;
+
+  @include sp {
+    bottom: 53%;
+  }
+}
+
+.nav .prev,
+.nav .next {
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+  background-color: rgba(31, 26, 26, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @include sp {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.nav .prev .triangle {
+  // background-color: #fff;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 7px 0 8px 10.7px;
+  border-color: transparent transparent transparent #ffffff;
+  transform: rotate(180deg);
+  position: relative;
+  left: -4px;
+
+}
+
+.nav .next .triangle {
+  // background-color: #fff;
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 7px 0 8px 10.7px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.p-slider__deco {
+  display: flex;
+  gap: 37px;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+
+  @include sp {
+    height: 24px;
+    gap: 30px;
+  }
+}
+
+.is-active {
+  border: 2px solid #77254d;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+.p-slider__deco__inner {
+  width: 25px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 7px 4px rgba(0, 0, 0, .4);
+  @include sp {
+    width: 9px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, .4);
+  }
+}
+
+.p-slider__heading {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+.p-index__heading__icon {
+  width: 30px;
+  height: 30px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+// ページネーション
+.p-post__pagination {
+  margin-bottom: 50px;
+  // overflow: hidden;
+  display: flex;
+  gap: 20px;
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.p-post__pagination__left,
+.p-post__pagination__right {
+  width: 50%;
+  position: relative;
+  @include sp {
+    width: 100%;
+  }
+
+
+}
+
+.p-post__pagination__heading {
+  position: absolute;
+  top: -14px;
+  z-index: 1;
+  color: #fff;
+  font-size: 14px;
+  background-color: #333;
+  padding: 5px 10px;
+  transform: translate(0%, 50%);
+}
+.p-post__pagination__left {
+  .p-post__pagination__heading {
+    left: 0;
+  }
+}
+.p-post__pagination__right {
+  .p-post__pagination__heading {
+    right: 0;
+  }
+}
+
+
+
+.p-post__pagination__left>a,
+.p-post__pagination__right>a {
+  display: block;
+  position: relative;
+  background: linear-gradient(45deg, black, transparent);
+  animation: mouseon .3s linear;
+  &:hover {
+    animation: mouseoff .2s linear;
+  }
+}
+
+@keyframes mouseon {
+    0% {
+      background: linear-gradient(45deg, black, transparent);
+    }
+    25% {
+      background: linear-gradient(70deg, black, transparent);
+    }
+    50% {
+      background: linear-gradient(90deg, black, transparent);
+    }
+    75% {
+      background: linear-gradient(110deg, black, transparent);
+    }
+    100% {
+        background: linear-gradient(135deg, black, transparent);
+    }
+}
+@keyframes mouseoff {
+  100% {
+    background: linear-gradient(45deg, black, transparent);
+  }
+  75% {
+    background: linear-gradient(70deg, black, transparent);
+  }
+  50% {
+    background: linear-gradient(90deg, black, transparent);
+  }
+  25% {
+    background: linear-gradient(110deg, black, transparent);
+  }
+  0% {
+    background: linear-gradient(135deg, black, transparent);
+  }
+}
+
+.p-post__pagination__left__img,
+.p-post__pagination__right__img {
+  display: block;
+  height: 150px;
+}
+
+.p-post__pagination__left:hover .p-post__pagination__left__img,
+.p-post__pagination__right:hover .p-post__pagination__right__img {
+
+}
+
+
+.p-post__pagination__left__img>img,
+.p-post__pagination__right__img>img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.p-post__pagination__left__text,
+.p-post__pagination__right__text {
+  position: absolute;
+  top: 45%;
+  left: 45px;
+  z-index: 999;
+  color: #fff;
+  font-size: 18px;
+  transform: translate(-6%, -20%);
+  @include sp {
+    font-size: 16px;
+  }
+}
+
+.p-post__pagination__left__text {
+  &::before {
+    content: "";
+    
+  }
+}
+
+.p-post__pagination__right__text {
+}
+

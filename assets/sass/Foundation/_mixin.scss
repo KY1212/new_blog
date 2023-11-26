@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+// ブレイクポイント
+$pc_w: 1920; // PC画面幅
+$pc2_w: 1440; // PC画面幅
+$tab_w: 1300; // タブレット画面幅
+$tab2_w: 1170; // タブレット画面幅
+$tab3_w: 780; // タブレット画面幅
+$sp_w: 375; // スマホ画面幅
+$sp2_w: 430; // スマホ画面幅
+
+@mixin pc {
+  // PC
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin pc2 {
+  // PC
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  // タブレット
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin tab2 {
+  // タブレット
+  @media (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin tab3 {
+  // タブレット
+  @media (max-width: 780px) {
+    @content;
+  }
+}
+
+@mixin sp {
+
+  // スマホ
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin sp2 {
+  // スマホ
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+$pc: (
+  (1 / $pc_w)*100vw
+);
+$pc2: (
+  (1 / $pc2_w)*100vw
+);
+$tab: (
+  (1 / $tab_w)*100vw
+);
+$tab2: (
+  (1 / $tab2_w)*100vw
+);
+$tab3: (
+  (1 / $tab3_w)*100vw
+);
+$sp: (
+  (1 / $sp_w)*100vw
+);
+$sp2: (
+  (1 / $sp2_w)*100vw
+);
+
+@function p($size, $viewport: $pc_w) {
+  $vw: $size * ((1 / $viewport)*100vw);
+  $px: $size * 1px;
+  @return min(#{$vw}, #{$px});
+}
+
+@function p2($size, $viewport: $pc2_w) {
+  $vw: $size * ((1 / $viewport)*100vw);
+  $px: $size * 1px;
+  @return min(#{$vw}, #{$px});
+}
+
+@function t($size, $viewport: $tab_w) {
+  @return $size * $tab;
+}
+
+@function t2($size, $viewport: $tab2_w) {
+  @return $size * $tab2;
+}
+
+@function t3($size, $viewport: $tab3_w) {
+  @return $size * $tab3;
+}
+
+@function s($size, $viewport: $sp_w) {
+  @return $size * $sp;
+}
+
+@function s($size, $viewport: $sp2_w) {
+  @return $size * $sp2;
+}
+
+//category color group
+$categories-color: (
+  0: #98B3C3,
+  1: #EA9E82,
+  2: #83A527,
+  3: #9D77AF,
+  4: #5A986A,
+  5: #C7A429,
+  6: #627DA8,
+  7: #999999
+);
+
+$user-icon: (
+  1: "../img/user_icon01.png",
+  2: "../img/user_icon02.png",
+  3: "../img/user_icon03.png",
+  4: "../img/user_icon04.png",
+  5: "../img/user_icon05.png",
+  6: "../img/user_icon06.png",
+  7: "../img/user_icon07.png"
+);
+
+//くすみ黄色プリセット
+// $text__color__black: #333;
+// $text__color__white: #fff;
+// $text__color__link: #6bc8e7;
+// $text__color__karioki: #a7a6a2;
+
+// $content__bg: #e7e4bb;
+// $body__bg: #d8d294;
+// $header__bg: #fff;
+
+
+
+//大正ロマンプリセット
+$text__color__black: #f5debb;
+$text__color__white: #fff;
+$text__color__link: #6bc8e7;
+$text__color__karioki: #333;
+// $content__bg: #a6c78e;
+$content__bg: rgba(255, 245, 245, 0.99);
+$body__bg: rgba(166, 199, 142, 0.3);
+$header__bg: #a6c78e;
+// $box__shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+$box__shadow: 0px 8px 18px 0px rgba(166,
+    199,
+    142, 0.2);
+
+
+// GoogleFont select
+// font-family: 'Amatic SC', sans-serif;
+// font-family: 'Passion One',sans-serif;
+// font-family: 'Shadows Into Light', cursive;

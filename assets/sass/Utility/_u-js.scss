@@ -1,0 +1,15 @@
+.is-tab {
+  display: none;
+}
+
+.is-tab__active {
+  background-color: #333;
+
+  .p-tab__categories__block__title {
+    color: #fff;
+  }
+}
+
+.is-show {
+  display: block;
+}

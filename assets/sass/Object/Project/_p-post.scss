@@ -1,0 +1,177 @@
+
+@use "./../../Foundation/mixin" as *;
+
+
+.p-post__wrap {
+  width: calc(100% - 40px);
+  min-width: 867px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 20px;
+  padding: 40px 20px;
+  background-color: $content__bg;
+  border-radius: 10px;
+  // box-shadow: $box__shadow;
+  background: radial-gradient(#ffffff 0% 3%, #fff9e6fa 127% 60%);
+  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, 0.1);
+
+  @include tab {
+    min-width: unset;
+  }
+  @include tab2 {
+    flex-direction: column;
+  }
+  @include sp {
+    gap: 12px;
+    
+  }
+}
+
+.p-post {
+  width: calc(50% - 13px);
+  display: flex;
+  position: relative;
+  a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @include tab2 {
+      flex-direction: unset;
+      gap: 12px;
+    }
+  }
+  @include tab2 {
+    width: 100%;
+  }
+  @include sp {
+    // width: calc(50% - 6px);
+  }
+}
+
+.p-post__title__wrap {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.p-post__image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 10px;
+  img {
+    transition-duration: .2s;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    @include tab2 {
+      height: 120px;
+      width: 220px;
+    }
+    @include sp {
+      height: 80px;
+      width: 120px;
+    }
+  }
+  @include tab2 {
+    width: unset;
+    height: 120px;
+    min-width: 220px;
+  }
+  @include sp {
+    height: 80px;
+    min-width: 120px;
+  }
+  &:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+.p-post__title {
+  font-size: 18px;
+  padding: 10px;
+  flex-grow: 1;
+  color: $text__color__karioki;
+  @include sp {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+}
+
+.p-sort__heading {
+  font-size: 24px;
+  text-align: center;
+}
+
+.p-sort__list {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.p-sort__item {
+  font-size: 18px;
+}
+
+.p-single__info__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.c-common__heading__wrap {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.c-common__heading {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.c-common__heading__text {
+  font-size: 18px;
+  color: #fff;
+}
+
+.p-post__category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 10px 0 0 0;
+  @include sp {
+    padding: 6px 10px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    transition-duration: .3s;
+    @include tab2 {
+      font-size: 14px;
+    }
+    @include sp {
+      font-size: 12px;
+    }
+
+  }
+  &:hover {
+    opacity: .8;
+    background: rgba(255, 255, 255, 0.8);
+    a {
+    color: #333;
+    }
+  }
+}

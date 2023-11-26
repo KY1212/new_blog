@@ -1,0 +1,51 @@
+@use "./../../Foundation/mixin" as *;
+
+.pagination {
+  margin: 40px 0 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pnavi {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #333;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: inset -5px -5px 10px 0px rgba(145,112,126, 0.5),
+    inset 5px 5px 10px 0px rgba(145, 112, 126, 0.6);
+    @include sp {
+      padding: 10px 15px;
+    }
+}
+
+.pagination .current {
+  padding: 15px 20px;
+  background: rgb(106, 164, 97);
+  color: #fff;
+  @include sp {
+    padding: 10px 15px;
+  }
+}
+
+.pagination .prev,
+.pagination .next {
+  background: transparent;
+  box-shadow: none;
+  color: #69a4db;
+}
+
+.pagination .dots {
+  background: transparent;
+  box-shadow: none;
+}

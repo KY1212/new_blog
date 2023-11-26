@@ -1,0 +1,47 @@
+@use "./../../Foundation/mixin" as *;
+
+form {
+  background-color: $content__bg;
+  padding: 60px 20px;
+}
+
+.p-contact form {
+  background: radial-gradient(#ffffff 0% 3%, #fff9e6fa 127% 60%);
+  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, 0.1);
+}
+
+#comments form {
+  background-color: unset;
+}
+
+.p-contact__wrap {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.p-contact__input__wrap {
+  display: flex;
+  align-items: center;
+  @include sp {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+
+
+.p-contact__label {
+  width: 200px;
+  display: block;
+}
+
+
+
+
+

@@ -1,0 +1,55 @@
+@use "./../Foundation/mixin" as *;
+.screen-reader-response {
+  display: none;
+}
+
+.wpcf7-response-output {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  color: #b54545;
+}
+
+.wpcf7-form-control-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.wpcf7-not-valid-tip {
+  color: #b54545;
+}
+
+.wpcf7-form-control {
+  border: 1px solid #668191;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 16px 24px;
+  width: 400px;
+  @include sp {
+    width: auto;
+  }
+}
+
+.p-contact input[type=submit] {
+  margin-top: 10px;
+  text-align: center;
+    color: #fff;
+    border: 1px solid #77ad7d;
+    background-color: #77ad7d;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 16px 24px;
+    width: 400px;
+    @include sp {
+      width: 85%;
+    }
+}
+
+.wpcf7-textarea {
+  width: 400px;
+  @include sp {
+    width: auto;
+  }
+}

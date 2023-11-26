@@ -1,0 +1,83 @@
+@use "./mixin" as *;
+
+body {
+  font-family: 'M PLUS Rounded 1c', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  background-color: $body__bg;
+  position: static;
+  // background: url(../img/texture03.png) no-repeat center;
+// background-color: rgba(216, 210, 148, 0.1);
+  background-blend-mode: lighten;
+  background-size: cover;
+  filter: sepia(25%);
+
+}
+
+.p-inner {
+  width: 1280px;
+  margin: 60px auto 0;
+  @include tab {
+    margin-top: 30px;
+    width: 96%;
+  }
+    &::before {
+      content: "";
+      background-image: url(../img/bg_cover.jpg);
+      background-color: rgba(255, 255, 255, 0.4);
+      background-blend-mode: difference;
+      background-size: auto;
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+}
+
+p,span,h1,h2,h3,h4,li {
+  letter-spacing: 1.3px;
+}
+
+.p-main {
+  display: flex;
+  // gap: 30px;
+  margin-top: 20px;
+  line-height: 1.4;
+  @include tab {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.p-common__wrap {
+  background-color: rgba(255, 245, 245, .99);
+  padding: 60px 20px;
+}
+
+.p-common__heading__h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  border-left: 8px double #b13838;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.p-privacypolicy__text {
+  margin-top: 20px;
+  line-height: 1.6;
+  letter-spacing: 1.4px;
+  font-size: 18px;
+}
+
+.p-common__list {
+  list-style: circle;
+  padding-left: 1.3em;
+  margin-top: 30px;
+}
+
+.p-common__item {
+  margin-top: 12px;
+  line-height: 1.6;
+}

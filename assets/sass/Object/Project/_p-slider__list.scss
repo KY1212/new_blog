@@ -1,0 +1,73 @@
+@use "./../../Foundation/mixin" as *;
+
+.p-pickup__title__wrap {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.p-pickup {
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: $content__bg;
+  box-shadow: $box__shadow;
+    background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
+      box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .1);
+
+  @include sp {
+    display: none;
+  }
+}
+
+.p-pickup__content {
+  width: 25%;
+  // border: 1px solid #333;
+  border-radius: 10px;
+  display: flex;
+  a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+  &:hover .pickup__title,.pickup__info {
+    opacity: 0.3;
+  }
+}
+
+.p-pickup__image {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  img {
+    transition-duration: .3s;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    @include tab2 {
+      height: 120px;
+    }
+  }
+}
+
+.p-pickup__title {
+  margin-top: 10px;
+  line-height: 1.7;
+  color: $text__color__karioki;
+}
+
+.p-pickup__info {
+  text-align: end;
+  margin-top: 8px;
+  color: $text__color__karioki;
+}

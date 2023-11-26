@@ -1,0 +1,57 @@
+@use "./../Foundation/mixin" as *;
+.comment-respond {
+  margin-top: 40px;
+}
+
+.logged-in-as {
+  display: none;
+}
+
+.comment-reply-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.comment-form {
+  padding: 20px;
+}
+
+.comment-form-comment {
+  textarea {
+    width: -webkit-fill-available;
+    border: 1px solid #668191;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+}
+
+.form-submit {
+  margin-top: 10px;
+  text-align: center;
+  .submit {
+    color: #fff;
+    border: 1px solid #77ad7d;
+    background-color: #77ad7d;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 16px 24px;
+    width: 400px;
+    @include sp {
+      width: 85%;
+    }
+  }
+
+}
+
+.commets-list {
+  li {
+    text-indent: unset;
+    &::before {
+
+      position: absolute;
+      left: -10px;
+      top: 9px;
+    }
+  }
+}
