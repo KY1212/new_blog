@@ -40,53 +40,7 @@ function comment_fields_control($defaults){
 add_filter( 'comment_form_defaults', 'comment_fields_control');
 
 
-// 目次自動生成
-function collate_toc_row($depth, $anchor, $heading) {
-	$level = substr($depth, 1);
-	if ( $anchor ) {
-		return ["<a href='#{$anchor}' class='{$depth} p-index__item'>{$heading}</a>", $level];
-	} else {
-		$slug = sanitize_title($heading);
-		return ["<a href='#{$slug}' class='{$depth} p-index__item'>{$heading}</a>", $level];
-	}
-}
 
-function add_toc_before_1st_heading( $content ){
-	/// 目次を自動生成して最初の見出し前に表示
-
-	preg_match_all('/<(h\d*)(?: class="(.*?)")?>((.*?))</',$content,$matches);
-	$levels = $matches[1];
-	$anchors = $matches[2];
-	$headings = $matches[3];
-	if ( $headings ) {
-		/// 見出しが１つ以上あるなら目次表示
-		$toc = '<div class="p-index">';
-$toc .= '<div class="p-index__heading"><span class="p-index__heading__icon"><img src="' . get_template_directory_uri() . '/assets/img/list.svg"></span><span>目録</span></div>';
-		$collated = array_map('collate_toc_row', $levels, $anchors, $headings );
-		$previous_level = 2;
-		$toc .= '<ol class="p-index__list">';
-		foreach ($collated as $row) {
-			$current_level = $row[1];
-			if (  $current_level == $previous_level ) {
-				$toc .= '<li>' . $row[0];
-			} else if (  $current_level < $previous_level ) {
-				$toc .= str_repeat('</ol>', $previous_level - $current_level) . '<li>'. $row[0];
-			} else {
-				$toc .= '<ol><li>' . $row[0];
-			}
-
-			$previous_level = $row[1];
-
-		}
-		$toc .= str_repeat('</ol>', $previous_level) . '</li></ol>';
-		$toc .= '</div>';
-
-		$content_parts = preg_split("/(<h\d*)/", $content, 2, PREG_SPLIT_DELIM_CAPTURE);
-		$content = $content_parts[0]  . $toc . $content_parts[1].$content_parts[2];
-	}
-	return $content;
-}
-add_filter( 'the_content', 'add_toc_before_1st_heading', 11);
 
 
 // 投稿画像に任意のクラスを付与
@@ -178,6 +132,11 @@ function customize_tinymce_settings($mceInit) {
       'title' => '画像（middlesize）',
       'block' => 'figure',
       'classes' => 'p-single__add__image__meddle',
+    ),
+    array(
+      'title' => '目次',
+      'block' => 'div',
+      'classes' => 'p-index',
     ),
     array(
       'title' => 'ボタン(googleリンク)',

@@ -30,31 +30,33 @@ jQuery(function ($) {
     }
   }
 
-function hamburger() {
-  const menu = $(".p-header__menu--wrap");
-  $(".c-hamburger").on("click", function () {
-    // $.toggleClass('is-active');
-    menu.toggleClass("is-display");
+// function hamburger() {
+//   const menu = $(".p-header__menu--wrap");
+//   $(".c-hamburger").on("click", function () {
+//     // $.toggleClass('is-active');
+//     menu.toggleClass("is-display");
 
-    if (menu.hasClass("is-display")) {
-      menu.animate({
-        left: "0%"
-      }, 200 );
-    } else if (!(menu.hasClass("is-display"))) {
-      menu.animate({
-        left: "100%"
-      }, 200 );
-    }
+//     if (menu.hasClass("is-display")) {
+//       menu.animate({
+//         left: "0%"
+//       }, 200 );
+//     } else if (!(menu.hasClass("is-display"))) {
+//       menu.animate({
+//         left: "100%"
+//       }, 200 );
+//     }
 
-    //スクロール禁止
-    $('body').toggleClass("c-no_scroll");
-  });
-}
+//     //スクロール禁止
+//     $('body').toggleClass("c-no_scroll");
+//   });
+// }
 
 
   $(".c-hamburger").click(function () {
     $(this).toggleClass('active');
 });
+
+
 
 
   heightAlign();

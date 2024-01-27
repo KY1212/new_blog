@@ -1,15 +1,43 @@
 @use "./mixin" as *;
 
+// html,
+// body {
+//   overflow-x: hidden;
+//   scroll-behavior: smooth;
+// }
+
+html {
+    filter: sepia(25%);
+}
+
 body {
   font-family: 'M PLUS Rounded 1c', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
   background-color: $body__bg;
-  position: static;
+  // position: static;
   // background: url(../img/texture03.png) no-repeat center;
 // background-color: rgba(216, 210, 148, 0.1);
   background-blend-mode: lighten;
   background-size: cover;
-  filter: sepia(25%);
+}
 
+.c-wrapper {
+  overflow-x: hidden;
+  background-image: url(../img/bg_cover.jpg);
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: difference;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.is-fixed {
+  overflow-y: hidden;
+  touch-action: none;
 }
 
 .p-inner {
@@ -33,7 +61,10 @@ body {
       left: 0;
       z-index: -1;
     }
+}
 
+.p-inner__top {
+  margin: 20px auto 0;
 }
 
 p,span,h1,h2,h3,h4,li {

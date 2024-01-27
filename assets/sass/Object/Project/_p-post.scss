@@ -124,23 +124,30 @@
 .p-single__info__wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   margin-top: 10px;
 }
 .c-common__heading__wrap {
   background: rgba(0, 0, 0, 0.4);
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .c-common__heading {
   text-align: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .c-common__heading__text {
   font-size: 18px;
+  line-height: 1.6;
   color: #fff;
+  & + & {
+    margin-top: 10px;
+  }
 }
 
 .p-post__category {

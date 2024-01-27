@@ -19,24 +19,44 @@
   <title>JOURNEY TO AIM HIGH</title>
 </head>
 <body>
+<div class="c-wrapper">
+
 
   <header class="p-header">
     <h1 class="p-header__title">
       <!-- <img src="" alt="ヘッダータイトル"> -->
       <a href="/kato/">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/title.svg" alt="title">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_demo.svg" alt="title">
         
       </a>
     </h1>
-    <ul class="p-header__list">
-      <li class="p-header__items"><a href="">JP GUIDE</a></li>
-      <li class="p-header__items"><a href="/kato/journey/">JOURNEY</a></li>
-      <li class="p-header__items"><a href="/kato/food/">FOOD</a></li>
-      <li class="p-header__items"><a href="/kato/recommend/">RECOMMEND</a></li>
-      <li class="p-header__items"><a href="/kato/motorcycle/">MOTORCYCLE</a></li>
-      <li class="p-header__items"><a href="/kato/about/">ABOUT</a></li>
-      <li class="p-header__items"><a href="/kato/contact/">CONTACT</a></li>
-    </ul>
   </header>
+  <ul class="p-header__list">
+    <li class="p-header__items"><a href="/kato/journey/">JOURNEY</a></li>
+    <li class="p-header__items"><a href="/kato/items/">ITEMS</a></li>
+    <li class="p-header__items"><a href="/kato/recommend/">RECOMMEND</a></li>
+    <li class="p-header__items"><a href="/kato/motorcycle/">MOTORCYCLE</a></li>
+    <li class="p-header__items"><a href="/kato/about/">ABOUT</a></li>
+    <li class="p-header__items"><a href="/kato/contact/">CONTACT</a></li>
+  </ul>
+  <div class="is-hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="p-header__menu__sp">
+    <h1 class="p-header__menu__heading__sp">JOURNEY TO AIM HIGH</h1>
+
+    <ul class="p-header__list__sp">
+      <li class="p-header__items__sp"><a href="/kato/journey/">- JOURNEY</a></li>
+      <li class="p-header__items__sp"><a href="/kato/items/">- FOOD</a></li>
+      <li class="p-header__items__sp"><a href="/kato/recommend/">- RECOMMEND</a></li>
+      <li class="p-header__items__sp"><a href="/kato/motorcycle/">- MOTORCYCLE</a></li>
+      <li class="p-header__items__sp"><a href="/kato/about/">- ABOUT</a></li>
+      <li class="p-header__items__sp"><a href="/kato/contact/">- CONTACT</a></li>
+
+
+    </ul>
+  </div>
 
   

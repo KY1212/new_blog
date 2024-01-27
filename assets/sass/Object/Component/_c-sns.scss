@@ -2,14 +2,31 @@
 
 .c-sns {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   gap: 10px;
+  position: relative;
+  margin-top: 100px;
+  &::after {
+    content: 'shareしてね！';
+    font-size: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -21px;
+    left: 50%;
+  }
+
 }
 
 .c-sns__item {
-  border: 1px solid #333;
   border-radius: 8px;
   transition-duration: .2s;
+  position: relative;
+  will-change: transform;
+  bottom: 0;
+      &:hover {
+    opacity: .8;
+    bottom: 3px;
+  }
   a {
     gap: 6px;
     display: flex;
@@ -29,6 +46,27 @@
 }
 
 .c-sns__icon {
-  width: 22px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
+}
+
+.sidebar__profile__sns__tem {
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #333;
+    transition-duration: .2s;
+    &:hover {
+      opacity: .8;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

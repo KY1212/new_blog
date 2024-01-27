@@ -9,7 +9,9 @@ Template Name: about
 
   <div class="p-inner">
     <div class="p-about">
-      準備中です。
-  </div>
+      <section class="p-post__wrap">
+        準備中です。
+      </section>
+    </div>
   </div>
 <?php get_footer(); ?>

@@ -11,10 +11,9 @@
             <p class="p-sidebar__profile__text">ラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたい</p>
           </div>
           <ul class="p-sidebar__profile__sns__list">
-            <li class="sidebar__profile__sns__tem"><a href="">Twitter(X)</a></li>
-            <li class="sidebar__profile__sns__tem"><a href="">Facebook</a></li>
-            <li class="sidebar__profile__sns__tem"><a href="">Instagram</a></li>
-            <li class="sidebar__profile__sns__tem"><a href="">Youtube</a></li>
+            <li class="sidebar__profile__sns__tem"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/x.svg" alt="X" class="c-sns__icon"></a></li>
+            <li class="sidebar__profile__sns__tem"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram-white.svg" alt="instagram" class="c-sns__icon"></a></li>
+            <!-- <li class="sidebar__profile__sns__tem"><a href="">Youtube</a></li> -->
           </ul>
         </nav>
         <nav class="p-sidebar__post__block">

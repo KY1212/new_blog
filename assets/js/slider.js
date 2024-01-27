@@ -117,6 +117,9 @@ $(function () {
       }
     }
 
+
+
+
     //クリック、マウスイベント群
     function setEvent() {
       $slider.on({
@@ -141,5 +144,7 @@ $(function () {
 
   slider('.slider1');
   slider('.slider2');
+  slider('.slider3');
+  slider('.slider4');
 });
 

@@ -11,12 +11,15 @@
   <small>© 2023 yusuke kato.</small>
 </footer>
 <?php wp_footer(); ?>
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+</div>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.7.1.min.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slider.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/tab.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/hamburger.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/auto_build_index.js"></script>
 
 </body>
 </html>

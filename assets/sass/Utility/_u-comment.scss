@@ -45,12 +45,18 @@
 }
 
 .commets-list {
+    counter-reset: count 0;  
   li {
     text-indent: unset;
+    margin-left: 2.4em;
+    @include sp {
+      margin-left: 1.5em;
+    }
     &::before {
-
+      counter-increment: count 1;
+      content: counters(count, "-") ". ";
       position: absolute;
-      left: -10px;
+      left: -25px;
       top: 9px;
     }
   }

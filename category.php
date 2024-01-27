@@ -36,7 +36,6 @@
                 <?php echo $catname; ?>
               </a>
             </p>
-
             <a href="<?php the_permalink(); ?>">
               <figure class="p-post__image">
               <?php 
@@ -55,11 +54,9 @@
           </div>
           <?php endwhile; ?>
           <?php endif; ?>
-        </div>
-      </section>
-        <?php get_sidebar(); ?>
-      </main>
-    </div>
+        </section>
+      </div>
+      <?php get_sidebar(); ?>
+    </main>
   </div>
-
 <?php get_footer(); ?>

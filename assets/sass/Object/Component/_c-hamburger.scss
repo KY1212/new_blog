@@ -1,0 +1,53 @@
+@use "./../../Foundation/mixin" as *;
+
+.is-hamburger {
+  display: none;
+  @include sp {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    z-index: 1000;
+    span {
+      transition-duration: .3s;
+      width: 20px;
+      height: 0;
+      border: 2px solid #333;
+      position: absolute;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+  }
+}
+
+// .is-overflow {
+//   overflow-x: hidden;
+// }
+
+.is-open {
+  span:nth-child(1) {
+    top: 14px;
+    transform: rotate(45deg);
+    left: 4px;
+  }
+  span:nth-child(2) {
+    left: 130px;
+    transform: rotate(100deg);
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    top: 14px;
+    transform: rotate(135deg);
+    left: 4px;
+  }
+}
+
