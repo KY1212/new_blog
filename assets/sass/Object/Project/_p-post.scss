@@ -10,11 +10,9 @@
   gap: 26px;
   margin-top: 20px;
   padding: 40px 20px;
-  background-color: $content__bg;
   border-radius: 10px;
   // box-shadow: $box__shadow;
-  background: radial-gradient(#ffffff 0% 3%, #fff9e6fa 127% 60%);
-  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, 0.1);
+  background: $main-gradient-color;
 
   @include tab {
     min-width: unset;

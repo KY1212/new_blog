@@ -8,13 +8,13 @@
   position: relative;
   padding: 60px 30px;
   gap: 30px;
-  background: rgb(255, 227, 60);
+  // background: rgb(255, 227, 60);
 
   // background: linear-gradient(140deg, rgba(166, 199, 142, .3) 0%, rgb(255, 248, 172) 12%, rgb(255, 255, 255) 100%);
   // box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
 
-  background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
-  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .5);
+  background: $main-gradient-color;
+  // box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .5);
 
   @include sp {
     position: fixed;

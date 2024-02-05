@@ -1,3 +1,5 @@
+@use "./../../Foundation/mixin" as *;
+
 footer {
   padding: 40px 0;
   text-align: center;
@@ -5,7 +7,7 @@ footer {
   color: #333;
   // position: absolute;
   // bottom: 0;
-  background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
+  background: $main-gradient-color;
   box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .13);
 }
 

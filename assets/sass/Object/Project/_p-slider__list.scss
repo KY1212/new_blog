@@ -16,10 +16,9 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  background-color: $content__bg;
+  // background-color: $content__bg;
   box-shadow: $box__shadow;
-    background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
-      box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .1);
+  background: $main-gradient-color;
 
   @include sp {
     display: none;

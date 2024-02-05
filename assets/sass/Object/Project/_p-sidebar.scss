@@ -14,9 +14,9 @@
 }
 
 .p-sidebar__profile {
-  background-color: $content__bg;
+  background-color: $main-gradient-color;
   border-radius: 10px;
-  box-shadow: $box__shadow;
+  // box-shadow: $box__shadow;
 }
 
 .p-sidebar__profile__bg {
@@ -102,7 +102,6 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: $box__shadow;
-  background: radial-gradient(#ffffff 0% 3%, #fff9e6fa 127% 60%);
-  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, 0.1);
+  background: $main-gradient-color;
 
 }

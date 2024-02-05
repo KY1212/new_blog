@@ -6,8 +6,8 @@
   min-width: 843px;
   background-color: $content__bg;
   padding: 30px;
-  background: radial-gradient(#ffffff 0% 3%, rgba(255, 249, 230, 0.9803921569) 127% 60%);
-  box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .13);
+  background: $main-gradient-color;
+  // box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .13);
   @include tab {
     min-width: unset;
     width: unset;
