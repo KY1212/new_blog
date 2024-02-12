@@ -1,21 +1,14 @@
 @use "./../../Foundation/mixin" as *;
 
 .p-header {
-  background-color: $header__bg;
+  background-color: $main__bg__color;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   padding: 60px 30px;
   gap: 30px;
-  // background: rgb(255, 227, 60);
-
-  // background: linear-gradient(140deg, rgba(166, 199, 142, .3) 0%, rgb(255, 248, 172) 12%, rgb(255, 255, 255) 100%);
-  // box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
-
-  background: $main-gradient-color;
-  // box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .5);
-
+  background: $main__bg__color;
   @include sp {
     // position: fixed;
   }
@@ -31,22 +24,46 @@
 }
 
 .p-header__list {
-
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 24px 0;
-    background-color: #4e5359;
-    @include sp {
-      display: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 24px 0;
+  background-color: $main__bg__color__red;
+  @include sp {
+    display: none;
   }
 }
 
 .cat-item {
   font-size: 18px;
   a {
-    color: #fff;
+    padding: 10px 10px 5px 10px;
+    color: $text__color__cream;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    &:after {
+      content: '';
+      width: 30px;
+      height: 1px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      background-color: $main__bg__color;
+      transition-duration: .3s;
+    }
+  
+    &:hover {
+      opacity: .8;
+      &:after {
+        width: 100%;
+        opacity: .8;
+      }
+    }
   }
+
 }
 
 .p-header__menu__sp {

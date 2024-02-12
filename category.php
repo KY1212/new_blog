@@ -22,23 +22,30 @@ $page_include = apply_filters( 'the_content',$page->post_content);//ページの
           $cat3 = 'RECOMMEND';
           $cat4 = 'MOTORCYCLE';
         ?>
-        <div class="c-common__heading__wrap">
-          <h2 class="c-common__heading">"<?php echo $catname; ?>" の記事</h2>
-          <?php 
-            if ($catname == $cat1) {
-              echo "<p class='c-common__heading__text'>> 旅の道程を克明に記録。<br><p class='c-common__heading__text'>> 備忘録を兼ねており、ためになる情報を発信。</p>";
-            } 
-            if ($catname == $cat2) {
-              echo "<p class='c-common__heading__text'>> 飯。<br><p class='c-common__heading__text'>> 備忘録を兼ねており、ためになる情報を発信。</p>";
-            } 
-            if ($catname == $cat3) {
-              echo "<p class='c-common__heading__text'>> おすすめ<br><p class='c-common__heading__text'>> 備忘録を兼ねており、ためになる情報を発信。</p>";
-            } 
-            if ($catname == $cat4) {
-              echo "<p class='c-common__heading__text'>> バイク情報<br><p class='c-common__heading__text'>> 備忘録を兼ねており、ためになる情報を発信。</p>";
-            } 
-          ?>
+        <div class="scroll-infinity">
+          <div class="scroll-infinity__wrap">
+            <div class="scroll-infinity__list scroll-infinity__list--left">
+              <h2 class="c-common__heading">"<?php echo $catname; ?>" の記事</h2>
+              <div class="c-common__heading__text__wrap">
+                <?php 
+                  if ($catname == $cat1) {
+                    echo "<p class='c-common__heading__text'>> 備忘録を兼ねており、ためになる情報を発信。</p>";
+                  } 
+                  if ($catname == $cat2) {
+                    echo "<p class='c-common__heading__text'>> 飯。</p>";
+                  } 
+                  if ($catname == $cat3) {
+                    echo "<p class='c-common__heading__text'>> おすすめ</p>";
+                  } 
+                  if ($catname == $cat4) {
+                    echo "<p class='c-common__heading__text'>> バイク情報</p>";
+                  } 
+                ?>
+              </div>
+            </div>
+          </div>
         </div>
+
         <section class="p-post__wrap">
           <?php if(have_posts()): ?>
           <?php while(have_posts()):the_post(); ?>

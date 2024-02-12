@@ -4,10 +4,8 @@
   width: calc(100% - 48px);
   height: fit-content;
   min-width: 843px;
-  background-color: $content__bg;
+  background: $main__bg__color;
   padding: 30px;
-  background: $main-gradient-color;
-  // box-shadow: inset 0px 7px 65px 5px rgba(0, 0, 0, .13);
   @include tab {
     min-width: unset;
     width: unset;

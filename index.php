@@ -4,10 +4,14 @@
 
   <div class="p-inner p-inner__top">
 
-    <div class="c-common__heading__wrap">
-      <h2 class="c-common__heading">お知らせ</h2>
-      <div class="c-common__heading__text__wrap">
-        <p class='c-common__heading__text'>＞＞ ブログを公開しました。コンセプトは「情緒纏綿(じょうしょてんめん)」。</p>
+    <div class="scroll-infinity">
+      <div class="scroll-infinity__wrap">
+        <div class="scroll-infinity__list scroll-infinity__list--left">
+          <h2 class="c-common__heading">お知らせ</h2>
+          <div class="c-common__heading__text__wrap">
+            <p class='c-common__heading__text'>＞＞ ブログを公開しました。コンセプトは「情緒纏綿(じょうしょてんめん)」。</p>
+          </div>
+        </div>
       </div>
     </div>
     <main class="p-main">

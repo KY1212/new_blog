@@ -1,7 +1,6 @@
 @use "./../../Foundation/mixin" as *;
 
 .p-sidebar {
-  // min-width: 350px;
   height: fit-content;
   position: relative;
   display: flex;
@@ -14,9 +13,8 @@
 }
 
 .p-sidebar__profile {
-  background-color: $main-gradient-color;
+  background: $main__bg__color;
   border-radius: 10px;
-  // box-shadow: $box__shadow;
 }
 
 .p-sidebar__profile__bg {
@@ -98,10 +96,7 @@
 }
 
 .p-sidebar__post__block {
-  background-color: $content__bg;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: $box__shadow;
-  background: $main-gradient-color;
-
+  background: $main__bg__color;
 }

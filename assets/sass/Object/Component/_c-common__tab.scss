@@ -30,8 +30,7 @@ position: relative;
 
 .p-tab__categories__block {
   width: 25%;
-  border: 1px solid #333;
-  background-color: #fff;
+  background-color: $main__bg__color;
   margin: 0 0 -1px;
   transition-duration: .3s;
   display: flex;
@@ -45,6 +44,9 @@ position: relative;
     .p-tab__categories__block__title {
       color: #fff;
     }
+  }
+  & + & {
+    border-right: 1px solid $main__bg__color__red;
   }
 
   @include tab2 {
@@ -64,7 +66,7 @@ position: relative;
 .p-tab__categories__block__title {
   font-size: 18px;
   font-family: 'Passion One', sans-serif;
-  color: #333;
+  color: $text__color__red;
   transition-duration: .3s;
   padding-top: 4px;
 }

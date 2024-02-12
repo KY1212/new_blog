@@ -1,7 +1,7 @@
 @use "./../../Foundation/mixin" as *;
 
 form {
-  background-color: $content__bg;
+  background-color: $main__bg__color;
   padding: 60px 20px;
 }
 

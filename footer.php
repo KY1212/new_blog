@@ -8,7 +8,10 @@
       <li class="p-footer__link__item"><a href="/kato/about/">ABOUT</a></li>
       <li class="p-footer__link__item"><a href="/kato/contact/">CONTACT</a></li>
   </ul>
-  <small>© 2023 yusuke kato.</small>
+  <div class="p-footer__wrap">
+    <p><a href="/privacypolicy">プライバシーポリシー</a></p>
+    <small>© 2023 yusuke kato.</small>
+  </div>
 </footer>
 <?php wp_footer(); ?>
 </div>

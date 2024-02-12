@@ -16,9 +16,6 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  // background-color: $content__bg;
-  box-shadow: $box__shadow;
-  background: $main-gradient-color;
 
   @include sp {
     display: none;

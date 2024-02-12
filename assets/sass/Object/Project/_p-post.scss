@@ -11,8 +11,7 @@
   margin-top: 20px;
   padding: 40px 20px;
   border-radius: 10px;
-  // box-shadow: $box__shadow;
-  background: $main-gradient-color;
+  background: $main__bg__color;
 
   @include tab {
     min-width: unset;
@@ -133,6 +132,55 @@
   align-items: center;
   gap: 30px;
 }
+.c-common__heading__scroll {
+  width: 100%;
+  overflow: scroll;
+}
+
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  h2,p {
+    color: $text__color__cream;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+  }
+}
+.scroll-infinity__list--left {
+  animation: loop 10s -5s linear infinite;}
+.scroll-infinity__item {
+  width: calc(100vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+}
+// .c-common__heading,
+// .c-common__heading__text__wrap {
+//   text-wrap: nowrap;
+// }
+
+@keyframes loop {
+  0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
 
 .c-common__heading {
   text-align: center;
