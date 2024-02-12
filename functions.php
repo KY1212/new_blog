@@ -26,6 +26,15 @@ function wpcf7_autop_return_false() {
   return false;
 }
 
+//カテゴリーのスラッグ「/category/」を除去
+// function exclude_category_slug($termlink, $term, $taxonomy){
+//     // カテゴリースラッグから/category/を削除
+//     $termlink = str_replace('/category/', '/', $termlink);
+//     return $termlink;
+// }
+// add_filter('term_link', 'exclude_category_slug', 10, 3);
+
+
 /**
 * Comment Control
 */
@@ -45,7 +54,7 @@ add_filter( 'comment_form_defaults', 'comment_fields_control');
 
 // 投稿画像に任意のクラスを付与
 function add_image_class( $classes ) {
-return $classes . ' p-single__add__image__full';
+return $classes . ' p-single__add__image';
 }
 add_filter('get_image_tag_class', 'add_image_class');
 

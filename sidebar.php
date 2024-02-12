@@ -6,7 +6,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/012.jpg" alt="プロフィール画像">
           </figure>
           <div class="p-sidebar__profile__info">
-            <p class="p-sidebar__profile__name">加藤優介</p>
+            <p class="p-sidebar__profile__name">牛乳</p>
             <p class="p-sidebar__profile__job">住所不定無職</p>
             <p class="p-sidebar__profile__text">ラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたいラーメン食いたい</p>
           </div>

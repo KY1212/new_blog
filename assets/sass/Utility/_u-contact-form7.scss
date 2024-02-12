@@ -13,8 +13,10 @@
 .wpcf7-form-control-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  @include sp {
+    gap: 10px;
+    width: 100%;
+  }
 }
 
 .wpcf7-not-valid-tip {

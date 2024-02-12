@@ -32,7 +32,7 @@
           </div>
           <div class="p-tab__categories__block is-tab__title">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reccomend.svg" alt="" class="p-tab__categories__block__image">
-              <p class="p-tab__categories__block__title">RECCOMEND</p>
+              <p class="p-tab__categories__block__title">RECOMMEND</p>
           </div>
           <div class="p-tab__categories__block is-tab__title">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/motorcycle.svg" alt="" class="p-tab__categories__block__image">
@@ -75,7 +75,7 @@
           ?>
           <div class="p-post">
             <p class="p-post__category">
-              <a href="<?php echo ${'slug' . $i}; ?>">
+              <a href="/<?php echo ${'slug' . $i}; ?>/">
                 <?php echo ${'cat' . $i}; ?>
               </a>
             </p>

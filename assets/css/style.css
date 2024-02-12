@@ -257,20 +257,6 @@ body {
     width: 96%;
   }
 }
-.p-inner::before {
-  content: "";
-  background-image: url(../img/bg_cover.jpg);
-  background-color: rgba(255, 255, 255, 0.4);
-  background-blend-mode: difference;
-  background-size: auto;
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
 
 .p-inner__top {
   margin: 20px auto 0;
@@ -333,12 +319,6 @@ p, span, h1, h2, h3, h4, li {
   gap: 30px;
   background: #fdfdfd;
 }
-@media (max-width: 767px) {
-  .p-header {
-    position: fixed;
-  }
-}
-
 .p-header__title {
   font-size: 36px;
   color: #333;
@@ -361,10 +341,10 @@ p, span, h1, h2, h3, h4, li {
   }
 }
 
-.p-header__items {
+.cat-item {
   font-size: 18px;
 }
-.p-header__items a {
+.cat-item a {
   color: #fff;
 }
 
@@ -406,11 +386,11 @@ p, span, h1, h2, h3, h4, li {
   padding: 60px 0 0;
   width: 77%;
 }
-.p-header__items__sp {
+.p-header__list__sp .cat-item {
   border-bottom: 1px solid #b9b9b9;
   padding-bottom: 16px;
 }
-.p-header__items__sp a {
+.p-header__list__sp .cat-item a {
   list-style: none;
   font-size: 18px;
   color: #77254d;
@@ -521,6 +501,7 @@ p, span, h1, h2, h3, h4, li {
   font-size: 18px;
   padding: 10px;
   flex-grow: 1;
+  z-index: 0;
   color: #333;
 }
 @media (max-width: 767px) {
@@ -579,17 +560,12 @@ p, span, h1, h2, h3, h4, li {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 15px;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
   border-radius: 10px 0 0 0;
 }
-@media (max-width: 767px) {
-  .p-post__category {
-    padding: 6px 10px;
-  }
-}
 .p-post__category a {
+  padding: 10px 15px;
   text-decoration: none;
   font-size: 16px;
   color: #fff;
@@ -602,6 +578,7 @@ p, span, h1, h2, h3, h4, li {
 }
 @media (max-width: 767px) {
   .p-post__category a {
+    padding: 6px 10px;
     font-size: 12px;
   }
 }
@@ -824,12 +801,6 @@ footer {
 .p-single ol {
   counter-reset: count 0;
   list-style-type: none;
-  padding-left: 30px;
-}
-@media (max-width: 767px) {
-  .p-single ol {
-    padding-left: 0;
-  }
 }
 .p-single li {
   font-size: 18px;
@@ -921,7 +892,7 @@ footer {
 .p-single__text {
   font-size: 16px;
   margin-top: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   position: relative;
 }
 
@@ -1552,8 +1523,12 @@ form {
 .wpcf7-form-control-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
+}
+@media (max-width: 767px) {
+  .wpcf7-form-control-wrap {
+    gap: 10px;
+    width: 100%;
+  }
 }
 
 .wpcf7-not-valid-tip {

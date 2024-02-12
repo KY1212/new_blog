@@ -8,7 +8,21 @@
      crossorigin="anonymous"></script>
 
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デモサイト</title>
+  <meta name="description" content="メタディスクリプション">
+  <meta name="author" content="牛乳">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="og:url" content="https://サイト名">  <meta name="og:type" content="website">
+  <meta name="og:title" content="デモサイト">
+  <meta name="og:description" content="メタディスクリプション">
+  <meta name="og:site_name" content="デモサイト">
+  <meta name="og:image" content="/assets/common/ogp.jpg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/assets/img/logo.svg">
 
 <!-- GoogleFont -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,12 +46,9 @@
     </h1>
   </header>
   <ul class="p-header__list">
-    <li class="p-header__items"><a href="/kato/journey/">JOURNEY</a></li>
-    <li class="p-header__items"><a href="/kato/items/">ITEMS</a></li>
-    <li class="p-header__items"><a href="/kato/recommend/">RECOMMEND</a></li>
-    <li class="p-header__items"><a href="/kato/motorcycle/">MOTORCYCLE</a></li>
-    <li class="p-header__items"><a href="/kato/about/">ABOUT</a></li>
-    <li class="p-header__items"><a href="/kato/contact/">CONTACT</a></li>
+    <?php wp_list_categories('title_li='); ?>
+    <li class="cat-item"><a href="/about/">ABOUT</a></li>
+    <li class="cat-item"><a href="/contact/">CONTACT</a></li>
   </ul>
   <div class="is-hamburger">
     <span></span>
@@ -46,16 +57,10 @@
   </div>
   <div class="p-header__menu__sp">
     <h1 class="p-header__menu__heading__sp">JOURNEY TO AIM HIGH</h1>
-
     <ul class="p-header__list__sp">
-      <li class="p-header__items__sp"><a href="/kato/journey/">- JOURNEY</a></li>
-      <li class="p-header__items__sp"><a href="/kato/items/">- FOOD</a></li>
-      <li class="p-header__items__sp"><a href="/kato/recommend/">- RECOMMEND</a></li>
-      <li class="p-header__items__sp"><a href="/kato/motorcycle/">- MOTORCYCLE</a></li>
-      <li class="p-header__items__sp"><a href="/kato/about/">- ABOUT</a></li>
-      <li class="p-header__items__sp"><a href="/kato/contact/">- CONTACT</a></li>
-
-
+      <?php wp_list_categories('title_li='); ?>
+      <li class="cat-item"><a href="/about/">ABOUT</a></li>
+      <li class="cat-item"><a href="/contact/">CONTACT</a></li>
     </ul>
   </div>
 

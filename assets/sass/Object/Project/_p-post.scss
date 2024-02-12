@@ -97,6 +97,7 @@
   font-size: 18px;
   padding: 10px;
   flex-grow: 1;
+  z-index: 0;
   color: $text__color__karioki;
   @include sp {
     font-size: 16px;
@@ -152,22 +153,23 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 15px;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
   border-radius: 10px 0 0 0;
-  @include sp {
-    padding: 6px 10px;
-  }
+
   a {
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 16px;
     color: #fff;
     transition-duration: .3s;
+
+    
     @include tab2 {
       font-size: 14px;
     }
     @include sp {
+      padding: 6px 10px;
       font-size: 12px;
     }
 

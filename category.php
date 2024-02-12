@@ -1,3 +1,15 @@
+<?php
+$catid = get_query_var('cat');//現在のカテゴリーのIDを取得
+$category = get_category($catid);//IDから現在のカテゴリーの情報を取得
+$catname = $category->slug;//現在のカテゴリーのスラッグを取得
+$page_data = get_page_by_path('bar/'.$catname );
+//カテゴリースラッグと同じスラッグの固定ページの情報を取得
+//親ページがある場合は親ページのスラッグを含める：今回の場合親ページが bar なので、bar を入力
+$page_id = $page_data->ID;//取得した固定ページのIDを取得
+$page = get_post($page_id, 'OBJECT' , 'raw');//ページIDから固定ぺーじのオブジェクトを取得
+$page_include = apply_filters( 'the_content',$page->post_content);//ページの本文をフィルターフックで整形
+?>
+
 <?php get_header(); ?>
   <div class="p-inner">
     <main class="p-main">
@@ -6,7 +18,7 @@
           $cat = get_the_category();
           $catname = $cat[0]->cat_name;
           $cat1 = 'JOURNEY';
-          $cat2 = 'FOOD';
+          $cat2 = 'ITEMS';
           $cat3 = 'RECOMMEND';
           $cat4 = 'MOTORCYCLE';
         ?>
